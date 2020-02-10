@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TrendLog</string>
+    <string name="Welcome">Welcome</string>
+    <string name="Navn">Skriv dit navn</string>
+    <string name="Efternavn">Skriv dit Efternavn</string>
+    <string name="NavnOgEfternavn">Du hedder:</string>
+</resources>
