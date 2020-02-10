@@ -10,14 +10,15 @@ import kotlinx.android.synthetic.main.activity_main2.*
 
 class Main2Activity : AppCompatActivity() {
 
+    lateinit var textView: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        val bundle:Bundle = intent.getBundleExtra("FullName")
-        val string = bundle.get("FullName")
-        var textView = findViewById<View>(R.id.textView2)
-        // Set text data from prev view
+        val testString = intent.getStringExtra("FullName")
+        textView = findViewById(R.id.textView2)
+        textView.text = testString
 
 
     }

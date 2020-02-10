@@ -4,4 +4,5 @@
     <string name="Navn">Skriv dit navn</string>
     <string name="Efternavn">Skriv dit Efternavn</string>
     <string name="NavnOgEfternavn">Du hedder:</string>
+    <string name="nxtpage">Næste side</string>
 </resources>
