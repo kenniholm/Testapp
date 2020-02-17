@@ -6,4 +6,6 @@
     <string name="NavnOgEfternavn">Du hedder:</string>
     <string name="nxtpage">Næste side</string>
     <string name="press_me">Press me</string>
+    <string name="videre">Videre</string>
+    <string name="modeller_ind">Her skal vi have nogle modeller ind:</string>
 </resources>
