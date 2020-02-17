@@ -1,7 +1,7 @@
-Testapp
+Testapp <br>
 
-TODO:
--Setup Sqlite DB
--Implement MVP Pattern
--Show DB model on activity through MVP.
--Koin (Dependency injection) ?
+TODO: <br>
+-Setup Sqlite DB <br>
+-Implement MVP Pattern <br>
+-Show DB model on activity through MVP. <br>
+-Koin (Dependency injection) ? <br>
