@@ -8,4 +8,7 @@
     <string name="press_me">Press me</string>
     <string name="videre">Videre</string>
     <string name="modeller_ind">Her skal vi have nogle modeller ind:</string>
+    <string name="CarColor">Color:</string>
+    <string name="CarTopSpeed">Top Speed:</string>
+    <string name="CarModel">Car Model:</string>
 </resources>
