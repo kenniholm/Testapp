@@ -24,7 +24,9 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener{
             submit()
         }
+
     }
+
     fun submit(){
         val Name = editText.text.toString()
         val LastName = editEfternavn.text.toString()

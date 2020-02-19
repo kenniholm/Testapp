@@ -1,40 +1,43 @@
 package com.example.trendlog.Views
 
+import android.app.Application
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
-import com.example.trendlog.DI.DaggerPresenterComponent
+import com.example.trendlog.Application.testApplication
 import com.example.trendlog.Presenters.CarPresenter
 import com.example.trendlog.R
 import javax.inject.Inject
 
 class ListAdapter(context: Context): BaseAdapter() {
-    @Inject
-    lateinit var carPresenter: CarPresenter
-    lateinit var carModelTextView: TextView
-    lateinit var carColorTextView: TextView
-    lateinit var carSpeedTextView: TextView
 
-        private val _context: Context
+    //@Inject lateinit var carPresenter: CarPresenter
+    private lateinit var carModelTextView: TextView
+    private lateinit var carColorTextView: TextView
+    private lateinit var carSpeedTextView: TextView
+    private var _context: Context
+    private val cars = CarPresenter().getTestCars()
+    //var cars = CarPresenter().getTestCars()
 
-        init {
-            _context = context
-            DaggerPresenterComponent.create().inject(this)
-            carModelTextView.findViewById<TextView>(R.id.CarModelName)
-            carColorTextView.findViewById<TextView>(R.id.CarColorData)
-            carSpeedTextView.findViewById<TextView>(R.id.CarSpeedData)
+    init {
+
+        _context = context
+
         }
 
         // Ansvar for hvor mange rækker der er i listen.
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
 
-            var cars = carPresenter.getTestCars()
 
             val layoutInflater = LayoutInflater.from(_context)
             val rowMain = layoutInflater.inflate(R.layout.row_main3, parent, false)
+
+            carModelTextView = rowMain.findViewById(R.id.CarModelData)
+            carColorTextView = rowMain.findViewById(R.id.CarColorData)
+            carSpeedTextView = rowMain.findViewById(R.id.CarSpeedData)
 
             carModelTextView.text = cars[position].model
             carColorTextView.text = cars[position].color
@@ -52,6 +55,7 @@ class ListAdapter(context: Context): BaseAdapter() {
         }
         // Ansvar for at render hver række
         override fun getCount(): Int {
-            return 5
+
+            return cars.count()
         }
 }
